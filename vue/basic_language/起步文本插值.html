@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://cdn.bootcss.com/vue/2.3.4/vue.js"></script>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+    <div id="app">
+        {{message}}
+    </div>
+
+
+</body>
+</html>
+
+<script>
+    var app=new Vue({
+        el: "#app",
+        data: {
+            message:"hello"
+        }
+    })
+</script>
+
+
+<!--app.message='hello'-->
+<!--
+Vue.js 的核心是一个允许采用简洁的模板语法来声明式的将数据渲染进 DOM 的系统：
+现在数据和 DOM 已经被绑定在一起，所有的元素都是响应式的。我们该如何知道呢？
+打开你的浏览器的控制台 (就在这个页面打开)，并修改 app.message
+->

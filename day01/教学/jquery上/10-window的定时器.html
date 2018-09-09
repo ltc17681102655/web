@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="mydiv"></div>
+		<input type="button" value="start" />
+		<input type="button" value="stop" />
+	</body>
+	<script type="text/javascript">
+		/**
+		 *  window中的定时器
+		 * 		setInterval(函数，毫秒值);周期性的执行某个函数。
+		 * 		setTimeout(函数，毫秒值);一段时间后执行一次代码。
+		 * 		clearInterval(id_of_setInterval);停止周期性的执行某个函数。
+		 * 			id_of_setInterval：就是setinterval()方法的返回值。
+		 */
+//		function show(){
+//			//打印当前时间
+//			alert(new Date().toLocaleString());
+//		}
+//		setInterval("show()",1000);
+		
+		//在div中显示当前时间
+		function _clock(){
+			//获取当前时间
+			var time = new Date().toLocaleString();
+			//首先获取div标签对象
+			var mydiv = document.getElementById("mydiv");
+			//给div开始标签到结束标签之间设置内容
+			mydiv.innerHTML = time;	
+		}
+		//周期性的执行_clock函数
+//		_clock();
+//		var id = setInterval("_clock()",1000);
+//		clearInterval(id);
+		
+		setTimeout("_clock()",1000);
+	</script>
+</html>

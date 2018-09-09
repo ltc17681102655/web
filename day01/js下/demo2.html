@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>
+        <select id="provinceId" onchange="selectCity()" style="width:150px">
+            <option value="">----请-选-择-省----</option>
+            <option value="0">北京</option>
+            <option value="1">吉林省</option>
+            <option value="2">山东省</option>
+            <option value="3">河北省</option>
+            <option value="4">江苏省</option>
+        </select>
+        <select id="cityId" style="width:150px">
+            <option value="">----请-选-择-市----</option>
+        </select>
+    </div>
+
+</body>
+
+    <script type="text/javascript">
+        function selectCity(){
+            //初始化城市
+            var cities = [
+                ["海淀区","朝阳区"],
+                ["长春","吉林","延吉"],
+                ["济南","烟台"],
+                ["熊安","保定","石家庄"]
+            ];
+            //首先获取选中的省的信息
+            //对于form表单中的子标签来说，value属性值一般情况下都特指提交给服务器的值。
+            var value = document.getElementById("provinceId").value;
+            var city = cities[value];
+            //获取城市的下拉列表框对象
+            var cityselect = document.getElementById("cityId");
+            //清空之前的城市的信息
+            cityselect.innerHTML = "<option value=''>----请-选-择-市----</option>";
+            //遍历city数组，有几个城市信息就创建几个option标签对象
+            for (var i=0;i<city.length;i++){
+                //首先创建option标签对象
+                var option = document.createElement("option");//<option></option>
+                //添加显示值
+                option.innerHTML = city[i];
+                //添加到城市的下拉列表框下面
+                cityselect.appendChild(option);
+            }
+
+        }
+    </script>
+</html>

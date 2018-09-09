@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		/**
+		 *  eval();将字符串转换成代码执行。	
+		 * 		用来转换解析json；
+		 * 		
+		 * 		什么是json？只是一种数据格式，通俗易懂的能够描述对象。
+		 * 		json作用：用来作为传输数据的一种格式。
+		 * 
+		 * 		格式：
+		 * 				{key:value,key:value,key:value}
+		 * 
+		 * 	"<person>
+		 * 		<name>柳岩</name>
+		 * 		<age>28</age>
+		 * 		<sex>male</sex>
+		 * 	<person>"
+		 */
+//		eval("alert('ss')");
+		
+//		var json = {"name":"柳岩","age":"28","sex":"male"};
+//		alert(json.name+"=="+json.age);
+		
+		var jsonstr = "{'name':'柳岩','age':'28','sex':'male'}";
+		//需要使用eval将json字符串转换成json数据类型 
+		//为什么需要加上()    
+		var json = eval("("+jsonstr+")");
+		alert(json.name);
+//		alert(jsonstr.name);
+	</script>	
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<script type="text/javascript"  src="js/jquery-1.8.3.js">
+</script>
+
+
+
+<body>
+
+<!--query是一个优秀的javascript的轻量级框架-->
+<!-- js对象只能使用js对象的方法，jquery对象只能使用jquery对象的方法-->
+
+    <div id="mydiv"> </div>
+    <input type="text" id="myinput"   value="123"/>
+
+<!--js对象转jquery对象   语法： $(js对象)-->
+<!--var $myinput = $(myinput);-->
+
+<!--jquery对象转js对象  语法：jquery对象[索引]-->
+<!--var mydiv = $mydiv[0];-->
+
+</body>
+<script>
+    var value2 = $("#myinput").val();
+    alert(value2);
+</script>
+
+</html>

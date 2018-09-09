@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+        function demo1(){
+            alert("ss");//这句代码的含义是将内容弹到页面上。
+        }
+        // demo1();
+
+        function demo2(){
+            return 2;
+        }
+       alert( demo2());
+
+        //给函数起了个别名，然后可以通过别名来正常的调用函数。
+        function adfadfsdfafd(){
+            alert("demo8");
+        }
+        var demo8 = adfadfsdfafd;
+        demo8();
+
+    </script>
+</head>
+<body>
+
+
+<!--
+
+    2）匿名函数：
+        匿名函数也就是没有名字的函数
+        function(参数列表){
+        js逻辑代码
+        }
+        但是匿名函数没有办法直接调用，一般情况下匿名函数有两种使用场景：
+        第一种：将匿名函数赋值给一个变量，使用变量调用函数
+        定义函数并赋值给变量：var fn = function(参数列表){js逻辑代码}
+        调用函数：fn(实际参数);
+        第二种：匿名函数直接作为某个函数实际参数
+        例如：
+        function xxx(数字类型参数，字符串类型的参数，函数类型的参数){
+        //js逻辑代码
+        }
+        调用该函数：
+        xxx(100,”abc”,function(){});
+-->
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="button" onclick="show()" value="按钮" />
+		<!-- opacity: 0.2设置透明度 -->
+		<div style="opacity: 0.2; background-color: red;" id="mydiv" onmouseover="changeBlue()" onmouseout="changeGreen()">
+			我是div
+		</div>
+	</body>
+	<script type="text/javascript">
+		/**
+		 * 	给按钮绑定单击事件
+		 * 	事件绑定的第一种方式:
+		 * 		格式：
+		 * 		<标签名 事件名=函数> 
+		 */
+		function show(){
+			alert("单击事件绑定成功");
+		}
+		
+		/**
+		 * 给div添加鼠标悬浮和鼠标移出事件。修改背景色
+		 */
+		function changeBlue(){
+			//获取div标签对象
+			//通过id值获取标签对象
+			var mydiv = document.getElementById("mydiv");
+			//修改标签的属性
+			mydiv.style.backgroundColor = "blue";
+		}
+		function changeGreen(){
+			//获取div标签对象
+			//通过id值获取标签对象
+			var mydiv = document.getElementById("mydiv");
+			//修改标签的属性
+			mydiv.style.backgroundColor = "green";
+		}
+	</script>
+</html>

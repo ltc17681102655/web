@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		/**
+		 * js中函数的定义：
+		 * 		格式：
+		 * 			function 函数名(){
+		 * 				js代码。
+		 * 			}
+		 * 		重点：
+		 * 		1.函数必须要被调用才能执行。
+		 * 		2.js中的函数如果需要返回值，直接return就行。不需要声明返回值的类型。
+		 * 		3.js中的函数如果需要传入参数，那么直接写变量名就行，不需要声明类型。
+		 * 		4.在js中不存在函数重载的概念，如果2个函数名一样，后面的函数会将前面的覆盖。
+		 * 		
+		 * 		了解：
+		 * 		5.js中如果函数不需要传入参数，当我们调用的时候传入了参数，那么函数是能够正常执行的。
+		 * 		6.js中如果函数需要传递参数，当我们调用的时候没有传入参数，函数也是能够执行的。
+		 * 		7.基于第5点。既然可以给函数传入参数，那么我们可以通过arguments来获取传入的参数。
+		 * 				arguments:是专门用来存放参数的数组。
+		 *		8.js中可以给函数起个别名，然后通过别名来调用函数。
+		 */
+		function demo1(){
+			alert("demo1");
+		}
+//		demo1();
+		
+		function demo2(){
+			return 2;
+		}
+//		alert(demo2());
+		
+		function demo3(value){
+			alert(value);
+		}
+//		demo3("demo3");
+		function demo3(){
+			alert("demo3");
+		}
+//		demo3("aaa");
+		
+		function demo6(value){
+			alert(value);
+		}
+//		demo6();
+		
+		function demo7(){
+			alert(arguments[0]+"=="+arguments[1]);
+		}
+//		demo7("a","b");
+		
+		function adfadfafasdfasfd(){
+			alert("demo8");
+		}
+		var demo8 = adfadfafasdfasfd;
+		demo8();
+		
+	</script>
+</html>

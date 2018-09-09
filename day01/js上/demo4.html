@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<div>
+    <div id="mydiv" onmouseout="changeGreen()" onmouseover="changeBlue()"
+         style="width: 300px;height: 300px;">我是div</div>
+
+    密码：<input type="password"  id="pwd"/>
+    重复密码：<input  type="password"  id="repwd"/>
+
+</div>
+</body>
+
+<script type="text/javascript">
+    /*事件绑定函数的第一种方式
+         格式：
+         <标签名  事件名="函数名">
+     * */
+    //给div添加鼠标悬浮事件,让背景色变为蓝色
+    function changeBlue(){
+        //通过id获取div标签对象
+        var mydiv = document.getElementById("mydiv");
+        //修改mydiv标签对象的属性
+        mydiv.style.backgroundColor = "blue";
+        mydiv.style.fontSize = "100px";
+    }
+
+    function changeGreen(){
+        //通过id获取div标签对象
+        var mydiv = document.getElementById("mydiv");
+        //修改mydiv标签对象的属性
+        mydiv.style.backgroundColor = "green";
+        mydiv.style.fontSize = "20px";
+    }
+
+    /*
+         事件绑定函数的第二种方式：动态绑定
+         标签对象.事件名 = 匿名函数
+     * */
+    document.getElementById("repwd").onblur = function(){
+        //获取用户输入的2次密码
+        var pwd = document.getElementById("pwd").value;
+        var repwd = document.getElementById("repwd").value;
+        //判断
+        if(pwd==repwd){
+            alert("密码一致");
+        }else{
+            alert("密码不一致");
+        }
+    }
+</script>
+
+</html>

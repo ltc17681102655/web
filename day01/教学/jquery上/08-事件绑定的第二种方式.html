@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="mydiv">我是div</div>
+		密码：<input id="pwd" type="password" /><br />
+		重复密码：<input id="repwd"  type="password" /><span id="myspan"></span>
+		
+	</body>
+	<script type="text/javascript">
+		/**
+		 * 	js事件绑定的第二种方式：动态绑定事件
+		 * 		格式：
+		 * 		标签对象.事件名 = function(){};
+		 */
+		/**
+		 * 给div绑定鼠标单击事件
+		 */
+		//获取div标签对象.document.getElementById(id属性值);通过标签的id属性值来获取标签对象
+		var mydiv = document.getElementById("mydiv");
+		mydiv.onclick = function(){
+			alert("单击事件绑定成功");
+		}
+		
+		//获取重复密码标签对象
+		var reInput = document.getElementById("repwd");
+		//给重复密码框标签对象绑定失去焦点事件
+		reInput.onblur = function(){
+			//首先获取用户输入的密码
+			var pwd = document.getElementById("pwd").value;
+			//获取用户输入的重复密码
+			var repwd = document.getElementById("repwd").value;
+//			alert(pwd+"==="+repwd);
+			//获取span标签对象
+			var myspan = document.getElementById("myspan");
+			//比较密码
+			if(pwd==repwd){
+				//innerHTML :获取或者设置开始标签到结束标签之间的内容。
+				myspan.innerHTML = "";
+			}else{
+				myspan.innerHTML = "<font color='red'>密码不一致</font>";
+			}
+		}
+	</script>
+</html>

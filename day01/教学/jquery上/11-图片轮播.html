@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<img id="myimg" src="img/img1.jpg" width="500px"/>
+	</body>
+	<script type="text/javascript">
+		var i=1;
+		//切换图片
+		function changeImg(){
+			if(i<8){
+				i++;
+			}else{
+				i=1;
+			}
+			//首先获取标签对象
+			var myimg = document.getElementById("myimg");
+			//通过标签对象设置标签的src属性
+			myimg.src = "img/img"+i+".jpg";
+		}
+		setInterval("changeImg()",2000);
+	</script>
+</html>
